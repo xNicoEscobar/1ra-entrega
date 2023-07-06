@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
 import Carrito from "../../Assets/Shopping_cart.svg";
 
-const pages = ['Home', 'Store', 'Products'];
+const pages = ['Store'];
 // const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Navbar() {
@@ -37,7 +37,7 @@ function Navbar() {
     };
 
     return (
-        <AppBar position="static">
+        <AppBar position="sticky">
             <Container maxWidth="xl">
                 <Toolbar disableGutters>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -118,6 +118,7 @@ function Navbar() {
                         {pages.map((page) => (
                             <Button
                                 key={page}
+                                href='/store'
                                 onClick={handleCloseNavMenu}
                                 sx={{ my: 2, color: 'white', display: 'block' }}
                             >
